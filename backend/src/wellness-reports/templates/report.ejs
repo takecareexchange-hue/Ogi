@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            margin: 40px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid <%= theme.primaryColor || '#0056b3' %>;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-height: 60px;
+        }
+        .practice-info {
+            text-align: right;
+        }
+        .report-title {
+            color: <%= theme.primaryColor || '#0056b3' %>;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: <%= theme.primaryColor || '#0056b3' %>;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .patient-info {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .info-item {
+            width: 50%;
+            margin-bottom: 10px;
+        }
+        .info-label {
+            font-weight: bold;
+            color: #666;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #999;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .disclaimer {
+            font-style: italic;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <% if (practice.logo_url) { %>
+                <img src="<%= practice.logo_url %>" class="logo" alt="Practice Logo">
+            <% } else { %>
+                <h2 style="margin:0;"><%= practice.name %></h2>
+            <% } %>
+        </div>
+        <div class="practice-info">
+            <strong><%= practice.name %></strong><br>
+            Wellness Intelligence Report
+        </div>
+    </div>
+
+    <h1 class="report-title">Personalized Wellness Report</h1>
+
+    <div class="section">
+        <div class="section-title">Patient Information</div>
+        <div class="patient-info">
+            <div class="info-item">
+                <span class="info-label">Name:</span> <%= patient.first_name %> <%= patient.last_name %>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Date:</span> <%= new Date().toLocaleDateString() %>
+            </div>
+            <div class="info-item">
+                <span class="info-label">Email:</span> <%= patient.email %>
+            </div>
+            <% if (patient.dob) { %>
+            <div class="info-item">
+                <span class="info-label">DOB:</span> <%= patient.dob %>
+            </div>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Analysis & Protocol Recommendation</div>
+        <div class="content">
+            <p><strong>Approved Protocol:</strong> <%= protocol.name %></p>
+            <div class="report-body">
+                <%- content.summary || 'No summary provided.' %>
+            </div>
+        </div>
+    </div>
+
+    <% if (content.recommendations && content.recommendations.length > 0) { %>
+    <div class="section">
+        <div class="section-title">Key Recommendations</div>
+        <ul>
+            <% content.recommendations.forEach(function(rec) { %>
+                <li><%= rec %></li>
+            <% }); %>
+        </ul>
+    </div>
+    <% } %>
+
+    <% if (content.detailed_analysis) { %>
+    <div class="section">
+        <div class="section-title">Detailed Analysis</div>
+        <div class="report-body">
+            <%- content.detailed_analysis %>
+        </div>
+    </div>
+    <% } %>
+
+    <div class="footer">
+        <div class="disclaimer">
+            This report was generated using Ogi Clinical Intelligence and reviewed by a licensed provider. 
+            The information contained herein is for educational purposes and does not substitute for professional medical advice.
+        </div>
+        <p>&copy; <%= new Date().getFullYear() %> <%= practice.name %>. All rights reserved.</p>
+    </div>
+</body>
+</html>

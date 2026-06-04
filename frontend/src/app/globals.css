@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* ── Ogi Design Tokens ── */
+@theme {
+  /* Primary Colors */
+  --color-ogi-blue: #1A6BFF;
+  --color-deep-navy: #0A1F44;
+  --color-sky-blue: #E8F0FE;
+  --color-ocean-blue: #4A90E2;
+  --color-teal-accent: #00C9A7;
+
+  /* Neutral Colors */
+  --color-brand-gray-900: #1A1F36;
+  --color-brand-gray-700: #4A5568;
+  --color-brand-gray-500: #718096;
+  --color-brand-gray-300: #CBD5E0;
+  --color-brand-gray-100: #F7FAFC;
+
+  /* Semantic Colors */
+  --color-success: #38A169;
+  --color-warning: #D69E2E;
+  --color-error: #E53E3E;
+
+  /* Legacy aliases for backward compatibility */
+  --color-ogi-50: #E8F0FE;
+  --color-ogi-100: #E8F0FE;
+  --color-ogi-200: #B8D4FE;
+  --color-ogi-300: #7AB0FD;
+  --color-ogi-400: #4A90E2;
+  --color-ogi-500: #1A6BFF;
+  --color-ogi-600: #1A6BFF;
+  --color-ogi-700: #0A1F44;
+  --color-ogi-800: #0A1F44;
+  --color-ogi-900: #0A1F44;
+  --color-ogi-950: #0A1F44;
+
+  --color-clinical-success: #38A169;
+  --color-clinical-warning: #D69E2E;
+  --color-clinical-danger: #E53E3E;
+  --color-clinical-info: #1A6BFF;
+
+  /* Font families */
+  --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+
+  /* Shadows with Deep Navy base */
+  --shadow-brand-sm: 0 1px 2px rgba(10, 31, 68, 0.06);
+  --shadow-brand-md: 0 1px 3px rgba(10, 31, 68, 0.08), 0 1px 2px rgba(10, 31, 68, 0.06);
+  --shadow-brand-lg: 0 10px 15px rgba(10, 31, 68, 0.1), 0 4px 6px rgba(10, 31, 68, 0.05);
+  --shadow-brand-xl: 0 20px 25px rgba(10, 31, 68, 0.12), 0 10px 10px rgba(10, 31, 68, 0.04);
+}
+
+/* ── Brand Gradients ── */
+.gradient-primary {
+  background: linear-gradient(135deg, #1A6BFF, #4A90E2);
+}
+.gradient-wellness {
+  background: linear-gradient(135deg, #00C9A7, #1A6BFF);
+}
+.gradient-hero {
+  background: linear-gradient(135deg, #0A1F44, #1A6BFF);
+}
+
+/* ── Custom Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F7FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #718096;
+}
+
+/* ── Brand Component Classes ── */
+
+/* Status Indicators */
+.status-approved { color: #38A169; }
+.status-pending { color: #D69E2E; }
+.status-flagged { color: #E53E3E; }
+.status-in-progress { color: #1A6BFF; }
+.status-candidate { color: #00C9A7; }

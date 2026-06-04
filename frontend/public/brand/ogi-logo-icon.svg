@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="ogiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A6BFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A90E2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C9A7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A6BFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer hexagon shape -->
+  <polygon points="60,5 110,35 110,85 60,115 10,85 10,35" fill="none" stroke="url(#ogiGrad)" stroke-width="4"/>
+  <!-- Neural network inner lines -->
+  <line x1="60" y1="20" x2="98" y2="60" stroke="url(#dotGrad)" stroke-width="2.5" opacity="0.7"/>
+  <line x1="98" y1="60" x2="60" y2="100" stroke="url(#dotGrad)" stroke-width="2.5" opacity="0.7"/>
+  <line x1="60" y1="100" x2="22" y2="60" stroke="url(#dotGrad)" stroke-width="2.5" opacity="0.7"/>
+  <line x1="22" y1="60" x2="60" y2="20" stroke="url(#dotGrad)" stroke-width="2.5" opacity="0.7"/>
+  <!-- Center person/patient dot -->
+  <circle cx="60" cy="60" r="12" fill="url(#dotGrad)"/>
+  <!-- DNA helix hint -->
+  <path d="M52,44 Q60,52 52,60 Q44,68 52,76" fill="none" stroke="white" stroke-width="2" opacity="0.85"/>
+  <path d="M68,44 Q60,52 68,60 Q76,68 68,76" fill="none" stroke="white" stroke-width="2" opacity="0.85"/>
+</svg>

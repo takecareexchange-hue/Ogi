@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200" width="600" height="200">
+  <defs>
+    <linearGradient id="ogiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A6BFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A90E2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00C9A7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A6BFF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Icon: Stylized molecular/neural cross -->
+  <g transform="translate(30, 40)">
+    <!-- Outer hexagon shape representing intelligence/AI -->
+    <polygon points="55,0 102,28 102,77 55,105 8,77 8,28" fill="none" stroke="url(#ogiGrad)" stroke-width="3.5"/>
+    <!-- Inner connecting lines (neural network vibe) -->
+    <line x1="55" y1="15" x2="90" y2="52" stroke="url(#dotGrad)" stroke-width="2" opacity="0.7"/>
+    <line x1="90" y1="52" x2="55" y2="90" stroke="url(#dotGrad)" stroke-width="2" opacity="0.7"/>
+    <line x1="55" y1="90" x2="20" y2="52" stroke="url(#dotGrad)" stroke-width="2" opacity="0.7"/>
+    <line x1="20" y1="52" x2="55" y2="15" stroke="url(#dotGrad)" stroke-width="2" opacity="0.7"/>
+    <!-- Center dot representing the patient/person -->
+    <circle cx="55" cy="52" r="10" fill="url(#dotGrad)"/>
+    <!-- DNA helix hint inside -->
+    <path d="M48,38 Q55,45 48,52 Q41,59 48,66" fill="none" stroke="white" stroke-width="1.8" opacity="0.85"/>
+    <path d="M62,38 Q55,45 62,52 Q69,59 62,66" fill="none" stroke="white" stroke-width="1.8" opacity="0.85"/>
+  </g>
+
+  <!-- Logo Text: "ogi" -->
+  <text x="135" y="115" font-family="'Inter', 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="700" font-size="68" fill="url(#ogiGrad)" letter-spacing="-2">ogi</text>
+
+  <!-- Tagline -->
+  <text x="137" y="155" font-family="'Inter', 'Segoe UI', Helvetica, Arial, sans-serif" font-weight="400" font-size="14" fill="#5B6B8A" letter-spacing="3.5" text-transform="uppercase">CLINICAL INTELLIGENCE PLATFORM</text>
+</svg>
