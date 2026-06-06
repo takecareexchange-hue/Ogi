@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "ogi-frontend",
+  "name": "ogi-omega",
   "framework": "nextjs",
   "rewrites": [
     {
