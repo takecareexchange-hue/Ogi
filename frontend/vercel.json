@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://api.ogi.health/api/:path*"
+      "destination": "https://api.ogihealth.com/api/:path*"
     }
   ]
 }
