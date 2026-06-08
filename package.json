@@ -1,6 +1,6 @@
 {
-  "name": "ogi-frontend",
-  "version": "0.1.0",
+  "name": "ogi-omega",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
